@@ -5,7 +5,7 @@ import navItems from "./data";
 
 function Sidebar() {
   return (
-    <section className="absolute left-0 h-full w-24 shadow-xl">
+    <section className="absolute left-0 h-full w-24 shadow-2xl bg-white border-r-2 border-{#ceddfc}">
       <Link href="/">
         <NavItem
           className="bg-slate-500 py-2 hover:bg-slate-500"
@@ -20,7 +20,7 @@ function Sidebar() {
           }
         />
       </Link>
-      <ul className="h-full flex flex-col bg-slate-200 border-slate-400">
+      <ul className="flex flex-col">
         {navItems.map((item) => (
           <Link key={item.route} href={item.route}>
             <NavItem icon={item.icon} text={item.text} />

@@ -12,7 +12,7 @@ function Hero() {
         }
       />
       <div>
-        <Image src="/images/noer.png" height={450} width={450} alt="Noer Profile" />
+        <Image src="/images/noer_lrg.png" height={450} width={450} alt="Noer Profile" />
       </div>
     </section>
   );
