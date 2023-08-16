@@ -12,7 +12,12 @@ function Hero() {
         }
       />
       <div>
-        <Image src="/images/noer_lrg.png" height={450} width={450} alt="Noer Profile" />
+        <Image
+          src="https://res.cloudinary.com/dndvdllpg/image/upload/v1692225767/portfolio/noer_lrg_dkg3x2.png"
+          height={450}
+          width={450}
+          alt="Noer Profile"
+        />
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ function Sidebar() {
               className="rounded-full bg-slate-300"
               height={50}
               width={50}
-              src={"/images/noer.png"}
+              src="https://res.cloudinary.com/dndvdllpg/image/upload/v1692225866/portfolio/noer_obhxlc.png"
               alt="Noer Profile"
             />
           }
