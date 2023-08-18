@@ -12,7 +12,7 @@ function NavItem({ icon, text, className }: NavItemProps) {
   return (
     <li
       className={twMerge(
-        "flex flex-col items-center text-xs py-4 border-b-2 border-slate-50 hover:cursor-pointer hover:bg-slate-300",
+        "flex flex-col items-center font-semibold text-xs py-4 border-b-2 border-slate-200 transition hover:cursor-pointer hover:bg-slate-300",
         className
       )}
     >

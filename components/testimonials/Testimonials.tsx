@@ -16,7 +16,7 @@ function Testimonial({
   image: string;
 }) {
   return (
-    <aside className="flex h-full items-center justify-between border-2 p-8 text-left">
+    <aside className="flex h-full items-center justify-between p-8 text-left">
       <div>
         <Image
           className="rounded-full"

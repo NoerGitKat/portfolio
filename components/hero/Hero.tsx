@@ -1,23 +1,18 @@
 import Image from "next/image";
 import Text from "./Text";
 
-function Hero() {
+function Hero({ imageSrc }: { imageSrc: string }) {
   return (
-    <section className="flex justify-between gap-16 items-center px-8 m-auto">
+    <section className="flex flex-col-reverse lg:flex-row justify-between gap-36 items-center lg:pl-8 m-auto mx-8">
       <Text
         name={"Noer Paanakker"}
         occupations={["Instructional Designer", "Frontend Engineer"]}
         bio={
-          "Noer is a business-savvy educationalist with technical skills. He has spent the last 6 years helping underrepresented groups into high-quality tech jobs. You can often find him nerding out on cool ideas, in an effort to leave the world a better place than he found it."
+          "I build delightful user experiences and design enriching learning experiences for positive social impact."
         }
       />
       <div>
-        <Image
-          src="https://res.cloudinary.com/dndvdllpg/image/upload/v1692225767/portfolio/noer_lrg_dkg3x2.png"
-          height={450}
-          width={450}
-          alt="Noer Profile"
-        />
+        <Image src={imageSrc} height={450} width={450} alt="Noer Profile" />
       </div>
     </section>
   );

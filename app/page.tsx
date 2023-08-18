@@ -1,10 +1,12 @@
 import { Hero } from "@/components/hero";
-import { Testimonials } from "@/components/testimonials";
+import { Transition } from "@/components/transition";
 
 export default function Home() {
   return (
-    <main className="min-h-screen ml-24 flex flex-col items-center">
-      <Hero />
+    <main className="min-h-screen lg:ml-24 flex flex-col items-center justify-center">
+      <Transition>
+        <Hero imageSrc="https://res.cloudinary.com/dndvdllpg/image/upload/v1692225767/portfolio/noer_lrg_dkg3x2.png" />
+      </Transition>
     </main>
   );
 }
