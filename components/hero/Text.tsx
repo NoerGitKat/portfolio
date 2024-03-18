@@ -24,12 +24,12 @@ function Text({ name, occupations, bio }: TextProps) {
         <p className="mt-2 md:mt-4">{bio}</p>
         <aside className="flex gap-4 mt-4 font-bold">
           <Link href="/portfolio">
-            <button className="rounded-md py-2 px-4 text-white bg-[#044389] shadow-lg transition hover:scale-110">
+            <button className="rounded-md py-4 px-4 text-white bg-[#044389] shadow-lg transition hover:scale-110">
               My work
             </button>
           </Link>
           <button className="rounded-md py-2 px-4 border-2 border-[#044389] shadow-lg transition hover:scale-110">
-            Hire me
+            <a href="mailto:noer@lightworksweb.nl">Work with me</a>
           </button>
         </aside>
         <aside className="mt-4">
@@ -37,7 +37,7 @@ function Text({ name, occupations, bio }: TextProps) {
             className="flex  hover:underline"
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1EUOuiKaHL_KK9EsToWOHLkXW7TF_qCNE/view?usp=sharing",
+                "https://drive.google.com/file/d/1c5o1aXpaYNJBtkjS7XHsJQuLspRFiP12/view?usp=sharing",
                 "_blank",
                 "noreferrer"
               )
