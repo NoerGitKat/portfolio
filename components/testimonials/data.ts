@@ -9,7 +9,7 @@ const testimonials = [
   },
   {
     quote:
-      "If you are looking for a committed, professional, and passionate instructional designer, Noer is an excellent candidate! He is also a very good communicator and an extraordinary team member who collaborates proactively with others. highly recommend him as an asset to educational organizations.",
+      "If you are looking for a committed, professional, and passionate instructional designer, Noer is an excellent candidate! He is also a very good communicator and an extraordinary team member who collaborates proactively with others. Highly recommend him as an asset to educational organizations.",
     author: "Paty Gonzalez",
     title: "Senior Curriculum Designer",
     image: "https://res.cloudinary.com/dndvdllpg/image/upload/v1692225767/portfolio/paty_ym9tuo.jpg"
