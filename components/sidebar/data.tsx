@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 
-interface NavItem {
-  icon: ReactNode;
+interface SidebarItem {
+  icon?: ReactNode;
   text: string;
   route: string;
-  className: string;
+  className?: string;
 }
 
-const navItems: NavItem[] = [
+const navItems: SidebarItem[] = [
   {
     icon: (
       <svg

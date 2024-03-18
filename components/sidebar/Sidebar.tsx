@@ -4,7 +4,7 @@ import navItems from "./data";
 
 function Sidebar() {
   return (
-    <section className="hidden lg:block absolute z-0 left-0 h-full w-24 shadow-2xl bg-slate-100 border-r-2 border-{#ceddfc}">
+    <nav className="-translate-x-48 lg:translate-x-0 absolute z-10 left-0 h-full w-24 shadow-2xl bg-slate-100 border-r-2 border-{#ceddfc}">
       <Link href="/">
         <NavItem
           className="flex items-center bg-[#044389] h-20 p-2 hover:bg-original-content"
@@ -104,7 +104,7 @@ function Sidebar() {
           </Link>
         ))}
       </ul>
-    </section>
+    </nav>
   );
 }
 
