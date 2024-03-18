@@ -8,7 +8,7 @@ function Hero({ imageSrc }: { imageSrc: string }) {
   const [isMousedOver, setIsMousedOver] = useState(false);
 
   return (
-    <section className="flex flex-col-reverse lg:flex-row justify-between gap-4 xl:gap-36 items-center lg:pl-8 md:m-auto mx-8">
+    <section className="flex flex-col-reverse lg:flex-row justify-between gap-4 xl:gap-40 items-center lg:m-auto m-10">
       <Text
         name={"Noer Paanakker"}
         occupations={["Educational Technologist", "Learning Consultant", "Instructional Designer"]}

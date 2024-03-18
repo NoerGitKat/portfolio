@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import { Sidebar } from "../components/sidebar";
+import { Navbar } from "@/components/navbar";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -14,9 +15,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${openSans.className} text-zinc-800 `}>
+      <body
+        className={`${openSans.className} text-zinc-800 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:items-center`}
+      >
         <aside className="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('https://res.cloudinary.com/dndvdllpg/image/upload/v1710751044/portfolio/noise_texture.jpg')] opacity-20 mix-blend-soft-light"></aside>
-        <Sidebar />
+        <Navbar />
         {children}
       </body>
     </html>
