@@ -16,7 +16,7 @@ function Testimonial({
   image: string;
 }) {
   return (
-    <aside className="flex h-full items-center justify-between p-8 text-left">
+    <aside className="flex h-full items-center justify-between text-left mx-6">
       <div>
         <Image
           className="rounded-full"
@@ -26,10 +26,10 @@ function Testimonial({
           alt={`${author} Profile`}
         />
       </div>
-      <div className="max-w-xs max-h-sm">
-        <p>{quote}</p>
+      <div className="max-w-lg my-4">
+        <p className="italic">&quot;{quote}&quot;</p>
         <h2 className="mt-4 font-bold text-xl text-right">{author}</h2>
-        <h4 className="text-right italic">{title}</h4>
+        <h4 className="text-right">{title}</h4>
       </div>
     </aside>
   );
@@ -37,28 +37,31 @@ function Testimonial({
 
 function Testimonials() {
   return (
-    <section className="max-w-3xl">
-      <h1 className="text-2xl mb-4 font-bold">Wonderful people I&apos;ve worked with</h1>
-      <Carousel
-        autoPlay
-        infiniteLoop
-        emulateTouch
-        showStatus={false}
-        showIndicators={false}
-        showThumbs={false}
-        centerMode
-        centerSlidePercentage={80}
-      >
-        {testimonials.map((testimonial) => (
-          <Testimonial
-            key={testimonial.author}
-            quote={testimonial.quote}
-            author={testimonial.author}
-            title={testimonial.title}
-            image={testimonial.image}
-          />
-        ))}
-      </Carousel>
+    <section className="my-6">
+      <h1 className="text-3xl mb-4 font-bold">Wonderful people I&apos;ve worked with</h1>
+      <aside className="max-w-3xl m-auto">
+        <Carousel
+          autoPlay
+          infiniteLoop
+          emulateTouch
+          showStatus={false}
+          showIndicators={false}
+          showThumbs={false}
+          centerMode
+          centerSlidePercentage={80}
+          className=""
+        >
+          {testimonials.map((testimonial) => (
+            <Testimonial
+              key={testimonial.author}
+              quote={testimonial.quote}
+              author={testimonial.author}
+              title={testimonial.title}
+              image={testimonial.image}
+            />
+          ))}
+        </Carousel>
+      </aside>
     </section>
   );
 }

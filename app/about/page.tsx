@@ -1,13 +1,14 @@
 import { Testimonials } from "@/components/testimonials";
 import { Transition } from "@/components/transition";
-import { Introduction } from "@/components/about";
+import { Biography } from "@/components/about";
 
 export default function About() {
   return (
-    <main className="flex flex-col items-center justify-between p-24">
+    <main className="flex flex-col items-center justify-between">
       <Transition>
-        <Introduction />
-        <Testimonials />
+        <p>Under construction 🙈</p>
+        {/* <Biography /> */}
+        {/* <Testimonials /> */}
       </Transition>
     </main>
   );

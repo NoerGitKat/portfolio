@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body
-        className={`${openSans.className} text-zinc-800 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:items-center`}
+        className={`${openSans.className} text-zinc-800 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:items-center m-10`}
       >
         <aside className="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('https://res.cloudinary.com/dndvdllpg/image/upload/v1710751044/portfolio/noise_texture.jpg')] opacity-20 mix-blend-soft-light"></aside>
         <Navbar />

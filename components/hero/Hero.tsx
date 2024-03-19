@@ -8,7 +8,7 @@ function Hero({ imageSrc }: { imageSrc: string }) {
   const [isMousedOver, setIsMousedOver] = useState(false);
 
   return (
-    <section className="flex flex-col-reverse lg:flex-row justify-between gap-4 xl:gap-40 items-center lg:m-auto m-10">
+    <section className="flex flex-col-reverse lg:flex-row justify-between gap-4 xl:gap-40 items-center lg:m-auto">
       <Text
         name={"Noer Paanakker"}
         occupations={["Educational Technologist", "Learning Consultant", "Instructional Designer"]}
@@ -35,8 +35,13 @@ function Hero({ imageSrc }: { imageSrc: string }) {
           }}
           className="absolute z-20 w-[96%] h-[96%] rounded-full flex flex-col items-center justify-center transition-all duration-500 opacity-0 hover:cursor-pointer hover:opacity-100"
         >
-          <button className="rounded-md text-white font-semibold text-xl md:text-2xl lg:text-3xl h-3/6 lg:w-7/12 transition-all duration-300 hover:scale-125">
-            Work with me
+          <button className="transition-all duration-300 hover:scale-125">
+            <Image
+              src="https://res.cloudinary.com/dndvdllpg/image/upload/v1710874950/portfolio/send-email.svg"
+              alt="Send email icon"
+              width={125}
+              height={125}
+            />
           </button>
         </aside>
       </div>
