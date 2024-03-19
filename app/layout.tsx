@@ -91,29 +91,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <aside className="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('https://res.cloudinary.com/dndvdllpg/image/upload/v1710751044/portfolio/noise_texture.jpg')] opacity-20 mix-blend-soft-light"></aside>
         <Navbar />
         {children}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org/",
-            "@type": "WebSite",
-            name: "Noer's Portfolio Website",
-            url: "https://noerpaanakker.com",
-            potentialAction: {
-              "@type": "SearchAction",
-              target: "https://noerpaanakker.com/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            },
-            headline: "Noer's Portfolio Website",
-            image:
-              "https://res.cloudinary.com/dndvdllpg/image/upload/v1692225866/portfolio/noer-upscaled.jpg",
-            author: {
-              "@type": "Person",
-              name: "Noer Paanakker",
-              url: "https://www.linkedin.com/in/noerpaanakker/"
-            },
-            datePublished: "2024-03-19",
-            dateModified: "2024-03-19"
-          })}
-        </script>
       </body>
     </html>
   );
