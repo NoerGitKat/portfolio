@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
+import { CiLinkedin } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
 
 interface TextProps {
   name: string;
@@ -59,6 +61,14 @@ function Text({ name, occupations, bio }: TextProps) {
               />
             </svg>
           </button>
+        </aside>
+        <aside className="flex gap-2 mt-2">
+          <a href="https://github.com/noergitkat" target="_blank" rel="noopener noreferrer">
+            <FaGithub size="2em" className="transition-all hover:scale-110" />
+          </a>
+          <a href="https://linkedin.com/in/noerpaanakker" target="_blank" rel="noopener noreferrer">
+            <CiLinkedin size="2em" className="transition-all hover:scale-110" />
+          </a>
         </aside>
       </aside>
     </section>
