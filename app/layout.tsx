@@ -1,5 +1,4 @@
 import "./globals.css";
-import type { Viewport } from "next/dist/lib/metadata/types/extra-types";
 import type { Metadata } from "next/types";
 import { Open_Sans } from "next/font/google";
 import { Sidebar } from "../components/sidebar";
@@ -7,16 +6,15 @@ import { Navbar } from "@/components/navbar";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1
-};
-
 export const metadata: Metadata = {
   title: "Noer's Personal Website",
   description:
-    "An experienced instructional designer and learning consultant, with a background in software engineering. Passionate about helping others get the most out of their learning using technology and qual/quant research. MBA Leadership & Management, MSc Educational Science & Technology.",
+    "Noer is an experienced instructional designer and learning consultant, with a background in software engineering. He is passionate about helping others get the most out of their learning using technology and qual/quant research. In his free time he likes to read books, play around with code and travel the world.",
   metadataBase: new URL("https://noerpaanakker.com"),
+  viewport: {
+    width: "device-width",
+    initialScale: 1
+  },
   openGraph: {
     siteName: "Noer's Personal Website",
     type: "website",

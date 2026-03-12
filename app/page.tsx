@@ -5,7 +5,7 @@ import { Transition } from "@/components/transition";
 export const metadata: Metadata = {
   title: "Noer's Personal Website",
   description:
-    "An experienced instructional designer and learning consultant, with a background in software engineering. Passionate about helping others get the most out of their learning using technology and qual/quant research. MBA Leadership & Management, MSc Educational Science & Technology.",
+    "Noer is an experienced instructional designer and learning consultant, with a background in software engineering. He is passionate about helping others get the most out of their learning using technology and qual/quant research. In his free time he likes to read books, play around with code and travel the world.",
   keywords: [
     "noer paanakker",
     "instructional designer",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Noer's Personal Website",
     description:
-      "An experienced instructional designer and learning consultant, with a background in software engineering. Passionate about helping others get the most out of their learning using technology and qual/quant research. MBA Leadership & Management, MSc Educational Science & Technology.",
+      "Noer is an experienced instructional designer and learning consultant, with a background in software engineering. He is passionate about helping others get the most out of their learning using technology and qual/quant research. In his free time he likes to read books, play around with code and travel the world.",
     images: [
       {
         url: "https://res.cloudinary.com/dndvdllpg/image/upload/v1692225866/portfolio/noer-upscaled.jpg",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Noer's Personal Website",
     description:
-      "An experienced instructional designer and learning consultant, with a background in software engineering. Passionate about helping others get the most out of their learning using technology and qual/quant research. MBA Leadership & Management, MSc Educational Science & Technology.",
+      "Noer is an experienced instructional designer and learning consultant, with a background in software engineering. He is passionate about helping others get the most out of their learning using technology and qual/quant research. In his free time he likes to read books, play around with code and travel the world.",
     creator: "noerpaanakker",
     site: "noerpaanakker",
     images: [
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center md:justify-center m-10">
+    <main className="flex flex-col items-center max-w-6xl m-10 md:m-auto md:justify-center">
       <Transition>
         <Hero imageSrc="https://res.cloudinary.com/dndvdllpg/image/upload/v1692225866/portfolio/noer-upscaled.jpg" />
       </Transition>

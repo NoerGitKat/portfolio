@@ -41,7 +41,7 @@ function Text({ name, occupations, bio }: TextProps) {
               window.open(
                 "https://drive.google.com/file/d/1c5o1aXpaYNJBtkjS7XHsJQuLspRFiP12/view?usp=sharing",
                 "_blank",
-                "noreferrer"
+                "noopener,noreferrer"
               )
             }
           >
