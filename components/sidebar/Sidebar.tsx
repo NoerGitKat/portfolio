@@ -25,7 +25,6 @@ function Sidebar() {
                   fontSize="0"
                   fontFamily="none"
                   fontWeight="none"
-                  textAnchor="none"
                   data-fill-palette-color="tertiary"
                 ></path>
               </g>

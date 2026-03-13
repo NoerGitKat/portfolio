@@ -1,3 +1,3 @@
 module.exports = {
-  "*.{ts,tsx}": () => ["yarn lint", "yarn format"]
+  "*.{ts,tsx}": ["eslint --fix", "prettier --write"]
 };

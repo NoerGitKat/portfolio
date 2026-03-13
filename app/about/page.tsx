@@ -6,8 +6,9 @@ export default function About() {
   return (
     <main className="flex flex-col items-center justify-between max-w-6xl m-10 md:m-auto">
       <Transition>
-        <Testimonials />
-        <Biography />
+        <h1>Under construction 🙈</h1>
+        {/* <Testimonials />
+        <Biography /> */}
       </Transition>
     </main>
   );
