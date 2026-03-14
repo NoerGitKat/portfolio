@@ -3,9 +3,11 @@
 import Image from "next/image";
 import Text from "./Text";
 import { useState } from "react";
+import { useTrackEvent } from "../../hooks/useTrackEvent";
 
 function Hero({ imageSrc }: { imageSrc: string }) {
   const [isMousedOver, setIsMousedOver] = useState(false);
+  const { trackEvent } = useTrackEvent();
 
   return (
     <section className="flex flex-col-reverse lg:flex-row justify-between gap-4 xl:gap-40 items-center lg:m-auto">
@@ -31,6 +33,7 @@ function Hero({ imageSrc }: { imageSrc: string }) {
         />
         <aside
           onClick={(e) => {
+            trackEvent("button_clicked", "Hero Profile Email Trigger");
             window.location.href = "mailto:noer@lightworksweb.nl";
           }}
           className="absolute z-20 w-[96%] h-[96%] rounded-full flex flex-col items-center justify-center transition-all duration-500 opacity-0 hover:cursor-pointer hover:opacity-100"

@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Viewport } from "next";
 import type { Metadata } from "next/types";
 import { Open_Sans } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Sidebar } from "../components/sidebar";
 import { Navbar } from "@/components/navbar";
 
@@ -91,6 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <aside className="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('https://res.cloudinary.com/dndvdllpg/image/upload/v1710751044/portfolio/noise_texture.jpg')] opacity-20 mix-blend-soft-light"></aside>
         <Navbar />
         {children}
+        <GoogleAnalytics gaId="G-T4Z585R6GD" />
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
+import { useTrackEvent } from "../../hooks/useTrackEvent";
 
 interface TextProps {
   name: string;
@@ -12,6 +13,8 @@ interface TextProps {
 }
 
 function Text({ name, occupations, bio }: TextProps) {
+  const { trackEvent, trackAndNavigate } = useTrackEvent();
+
   return (
     <section className="flex flex-col max-w-lg">
       <sub className="md:text-lg text-sm italic">Well, hello there...</sub>
@@ -25,25 +28,34 @@ function Text({ name, occupations, bio }: TextProps) {
       <aside className="md:ml-[0.3rem]">
         <p className="mt-2 md:mt-4">{bio}</p>
         <aside className="flex gap-4 mt-4 font-bold">
-          <Link href="/portfolio">
+          <Link
+            href="/portfolio"
+            onClick={() => trackEvent("button_clicked", "Hero Work Navigation")}
+          >
             <button className="rounded-md py-4 px-4 text-white bg-[#044389] shadow-lg transition hover:scale-110">
               My work
             </button>
           </Link>
           <button className="rounded-md py-2 px-4 border-2 border-[#044389] shadow-lg transition hover:scale-110">
-            <a href="mailto:noer@lightworksweb.nl">Work with me</a>
+            <a
+              href="mailto:noer@lightworksweb.nl"
+              onClick={() => trackEvent("button_clicked", "Hero Contact Email")}
+            >
+              Work with me
+            </a>
           </button>
         </aside>
         <aside className="mt-4">
           <button
             className="flex  hover:underline"
-            onClick={() =>
+            onClick={() => {
+              trackEvent("button_clicked", "Hero Resume Download");
               window.open(
                 "https://drive.google.com/file/d/1c5o1aXpaYNJBtkjS7XHsJQuLspRFiP12/view?usp=sharing",
                 "_blank",
                 "noopener,noreferrer"
-              )
-            }
+              );
+            }}
           >
             Download Resume{" "}
             <svg
@@ -63,10 +75,20 @@ function Text({ name, occupations, bio }: TextProps) {
           </button>
         </aside>
         <aside className="flex gap-2 mt-2">
-          <a href="https://github.com/noergitkat" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/noergitkat"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent("button_clicked", "Hero Github Link")}
+          >
             <FaGithub size="2em" className="transition-all hover:scale-110" />
           </a>
-          <a href="https://linkedin.com/in/noerpaanakker" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://linkedin.com/in/noerpaanakker"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent("button_clicked", "Hero LinkedIn Link")}
+          >
             <CiLinkedin size="2em" className="transition-all hover:scale-110" />
           </a>
         </aside>

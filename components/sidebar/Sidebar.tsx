@@ -1,11 +1,17 @@
 import Link from "next/link";
 import NavItem from "./NavItem";
 import navItems from "./data";
+import { useTrackEvent } from "../../hooks/useTrackEvent";
 
 function Sidebar() {
+  const { trackAndNavigate } = useTrackEvent();
+
   return (
     <nav className="-translate-x-48 lg:translate-x-0 absolute z-10 left-0 h-full w-24 shadow-2xl bg-slate-100 border-r-2 border-{#ceddfc}">
-      <Link href="/">
+      <Link
+        href="/"
+        onClick={(e) => trackAndNavigate(e as any, "/", "button_clicked", "Sidebar Logo Home")}
+      >
         <NavItem
           className="flex items-center bg-[#044389] h-20 p-2 hover:bg-original-content"
           icon={
@@ -98,7 +104,18 @@ function Sidebar() {
       </Link>
       <ul className="flex flex-col">
         {navItems.map((item) => (
-          <Link key={item.route} href={item.route}>
+          <Link
+            key={item.route}
+            href={item.route}
+            onClick={(e) =>
+              trackAndNavigate(
+                e as any,
+                item.route,
+                "button_clicked",
+                `Sidebar Navigation: ${item.text}`
+              )
+            }
+          >
             <NavItem icon={item.icon} text={item.text} />
           </Link>
         ))}
